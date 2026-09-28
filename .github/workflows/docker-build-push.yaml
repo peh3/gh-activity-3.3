@@ -29,6 +29,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: |
-            ${{ vars.DOCKERHUB_USERNAME }}/flask-app:latest
-            ${{ vars.DOCKERHUB_USERNAME }}/flask-app:${{ github.sha }}
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_REPO }}:latest
+
